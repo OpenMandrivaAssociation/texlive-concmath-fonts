@@ -1,3 +1,9 @@
+# revision 17218
+# category Package
+# catalog-ctan /fonts/concmath
+# catalog-date 2006-08-27 16:41:02 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-concmath-fonts
 Version:	20060827
 Release:	1
@@ -95,6 +101,7 @@ offered by the concmath package.
 %doc %{_texmfdistdir}/doc/fonts/concmath-fonts/CATALOGUE
 %doc %{_texmfdistdir}/doc/fonts/concmath-fonts/Makefile
 %doc %{_texmfdistdir}/doc/fonts/concmath-fonts/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -105,3 +112,5 @@ offered by the concmath package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
