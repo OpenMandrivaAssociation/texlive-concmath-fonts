@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-concmath-fonts
 Version:	20060827
-Release:	5
+Release:	6
 Summary:	Concrete mathematics fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/concmath
