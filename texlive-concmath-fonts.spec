@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-concmath-fonts
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	Concrete mathematics fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/concmath
