@@ -1,18 +1,12 @@
-# revision 17218
-# category Package
-# catalog-ctan /fonts/concmath
-# catalog-date 2006-08-27 16:41:02 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-concmath-fonts
-Version:	20190228
+Version:	17218
 Release:	1
 Summary:	Concrete mathematics fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/concmath
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/concmath-fonts.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/concmath-fonts.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/concmath-fonts.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/concmath-fonts.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ fonts and from Knuth's Concrete Roman fonts. LaTeX support is
 offered by the concmath package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -95,24 +89,10 @@ offered by the concmath package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20060827-2
-+ Revision: 750420
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20060827-1
-+ Revision: 718116
-- texlive-concmath-fonts
-- texlive-concmath-fonts
-- texlive-concmath-fonts
-- texlive-concmath-fonts
-
